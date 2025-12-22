@@ -1,0 +1,22 @@
+# Quartus database and temporary files
+*/db/
+*.rdr.flock
+*.qdb
+*.qtl
+*.bak
+
+# Quartus incremental compilation
+*/incremental_db/
+
+# Simulation files
+*/simulation/
+
+# Output files
+*/output_files/*.rpt
+*/output_files/*.summary
+*/output_files/*.done
+*/output_files/*.jdi
+
+# Keep SOF/POF files
+!*/output_files/*.sof
+!*/output_files/*.pof
