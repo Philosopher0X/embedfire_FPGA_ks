@@ -1,1 +1,5 @@
-Info (10281): Verilog HDL Declaration information at seg_dynamic.v(14): object "CNT_1MS" differs only in case from object "cnt_1ms" in the same scope
+Info (10281): Verilog HDL Declaration information at i2c_master.v(22): object "start" differs only in case from object "START" in the same scope
+Info (10281): Verilog HDL Declaration information at i2c_master.v(25): object "reg_addr" differs only in case from object "REG_ADDR" in the same scope
+Info (10281): Verilog HDL Declaration information at i2c_master.v(26): object "wr_data" differs only in case from object "WR_DATA" in the same scope
+Info (10281): Verilog HDL Declaration information at i2c_master.v(29): object "rd_data" differs only in case from object "RD_DATA" in the same scope
+Info (10281): Verilog HDL Declaration information at seg_dynamic.v(15): object "CNT_1MS" differs only in case from object "cnt_1ms" in the same scope
