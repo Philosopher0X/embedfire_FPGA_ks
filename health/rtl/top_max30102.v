@@ -23,7 +23,9 @@ module top_max30102(
     output  wire            stcp        ,   // 74HC595存储时钟
     output  wire            ds          ,   // 74HC595串行数据
     output  wire            oe          ,   // 74HC595输出使能
-    
+    //oled接口
+	 output		   OLED_SCL,
+	 inout			OLED_SDA,
     // 调试LED（可选）
     output  reg     [3:0]   led             // LED指示灯
 );
@@ -37,6 +39,12 @@ wire    [3:0]   temp_frac   ;
 wire            temp_valid  ;
 wire            init_done   ;
 wire            error       ;
+
+//oled信号
+wire ds18b20_done;
+wire[7:0]  tempH;
+wire[7:0]  tempL;
+
 
 // 心率计算相关信号
 reg     [17:0]  ir_buf[31:0];   // IR数据缓冲区，存储32个样本
@@ -59,13 +67,15 @@ reg     [7:0]   temp_display;   // 温度显示值（整数部分）
 wire    [7:0]   ds18_temp_int;
 wire    [7:0]   ds18_temp_deci;
 
+
 // 实例化DS18B20驱动
 ds18b20_ctrl u_ds18b20_ctrl(
     .sys_clk    (sys_clk    ),
     .sys_rst_n  (sys_rst_n  ),
     .dq         (ds18b20_dq ),
     .temp_int   (ds18_temp_int),
-    .temp_deci  (ds18_temp_deci)
+    .temp_deci  (ds18_temp_deci),
+	 .temp_done  (ds18b20_done)
 );
 
 // 实例化MAX30102驱动
@@ -83,6 +93,21 @@ max30102_driver u_max30102_driver(
     .temp_valid     (temp_valid ),
     .init_done      (init_done  ),
     .error          (error      )
+);
+
+OLED_Top OLED_Topds(
+
+	.sys_clk		(sys_clk),
+	.rst_n		(sys_rst_n),
+	
+	.sensor_done		(ds18b20_done),
+	.temp_int			(ds18_temp_int),			//温度数据整数
+	.temp_deci			(ds18_temp_deci),			//温度数据小数
+	
+	//OLED IIC
+	.OLED_SCL	(OLED_SCL),
+	.OLED_SDA	(OLED_SDA)
+	
 );
 
 // 调试计数器 - 用于LED闪烁测试

@@ -5,7 +5,8 @@ module ds18b20_ctrl(
     inout  wire        dq,           // DS18B20数据线
     
     output reg  [7:0]  temp_int,     // 温度整数部分
-    output reg  [7:0]  temp_deci     // 温度小数部分(一位)
+    output reg  [7:0]  temp_deci,     // 温度小数部分(一位)
+    output reg         temp_done     // 转换完成标志脉冲
 );
 
 // 状态机定义
@@ -67,8 +68,10 @@ always @(posedge clk_1us or negedge sys_rst_n) begin
         temp_deci <= 8'd0;
         temp_data <= 16'd0;
         data_byte <= 8'd0;
+        temp_done <= 1'b0; // 复位 done 信号
     end
     else begin
+        temp_done <= 1'b0; 
         case (state)
             // 空闲状态，每隔1秒启动一次读取
             IDLE: begin
@@ -261,6 +264,7 @@ always @(posedge clk_1us or negedge sys_rst_n) begin
                             end
                             
                             byte_cnt <= 4'd0;
+                            temp_done <= 1'b1; 
                             state <= IDLE;
                         end
                     end

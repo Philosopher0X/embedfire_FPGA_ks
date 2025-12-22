@@ -149,10 +149,10 @@ VCCIO6                       : E14       : power  :                   : 2.5V    
 GND+                         : E15       :        :                   :         : 6         :                
 GND+                         : E16       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F1        :        :                   :         : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F2        :        :                   :         : 1         :                
+OLED_SDA                     : F2        : bidir  : 2.5 V             :         : 1         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1         :                
 nSTATUS                      : F4        :        :                   :         : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 1         :                
+OLED_SCL                     : F5        : output : 2.5 V             :         : 1         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F6        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 8         :                
