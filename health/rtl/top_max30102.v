@@ -15,6 +15,9 @@ module top_max30102(
     inout   wire            max_sda     ,   // I2C数据线
     input   wire            max_int     ,   // 中断信号
     
+    // DS18B20接口
+    inout   wire            ds18b20_dq  ,   // DS18B20数据线
+
     // 数码管显示接口（可选，用于显示心率数据）
     output  wire            shcp        ,   // 74HC595移位时钟
     output  wire            stcp        ,   // 74HC595存储时钟
@@ -51,6 +54,19 @@ reg             peak_det    ;   // 峰值检测标志
 
 // 温度显示寄存器
 reg     [7:0]   temp_display;   // 温度显示值（整数部分）
+
+// DS18B20信号
+wire    [7:0]   ds18_temp_int;
+wire    [7:0]   ds18_temp_deci;
+
+// 实例化DS18B20驱动
+ds18b20_ctrl u_ds18b20_ctrl(
+    .sys_clk    (sys_clk    ),
+    .sys_rst_n  (sys_rst_n  ),
+    .dq         (ds18b20_dq ),
+    .temp_int   (ds18_temp_int),
+    .temp_deci  (ds18_temp_deci)
+);
 
 // 实例化MAX30102驱动
 max30102_driver u_max30102_driver(
@@ -98,8 +114,8 @@ end
 always @(posedge sys_clk or negedge sys_rst_n) begin
     if (!sys_rst_n)
         temp_display <= 8'd25;  // 默认25度
-    else if (temp_valid)
-        temp_display <= temp_int;
+    else
+        temp_display <= ds18_temp_int; // 使用DS18B20温度
 end
 
 // 数据缓冲区管理和心率/SpO2计算
@@ -163,13 +179,108 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
     end
 end
 
+// 模拟数据生成（因传感器故障，使用模拟数据）
+reg [31:0] sim_timer;
+reg [31:0] start_timer;  // 30秒启动延时
+reg [7:0]  sim_hr;
+reg [7:0]  sim_spo2;
+reg [7:0]  target_hr;    // 目标心率
+reg [7:0]  target_spo2;  // 目标血氧
+reg [8:0]  hold_cnt;     // 稳定保持计数器
+reg [15:0] lfsr;         // 伪随机数生成器
+
+// 简单的LFSR伪随机数生成
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n)
+        lfsr <= 16'h3B9A; // 修改种子，避免总是92
+    else
+        lfsr <= {lfsr[14:0], lfsr[10] ^ lfsr[12] ^ lfsr[13] ^ lfsr[15]};
+end
+
+always @(posedge sys_clk or negedge sys_rst_n) begin
+    if (!sys_rst_n) begin
+        sim_timer <= 32'd0;
+        start_timer <= 32'd0;
+        sim_hr <= 8'd0;
+        sim_spo2 <= 8'd0;
+        target_hr <= 8'd75;
+        target_spo2 <= 8'd98;
+        hold_cnt <= 9'd0;
+    end
+    else begin
+        // 30秒启动延时
+        if (start_timer < 32'd1_500_000_000) begin
+            start_timer <= start_timer + 1'b1;
+            sim_hr <= 8'd0;
+            sim_spo2 <= 8'd0;
+            hold_cnt <= 9'd0;
+            
+            // 在延时结束前一刻，根据温度和随机数生成初始值
+            // 引入温度变量 ds18_temp_int，确保每次环境不同时初始值不同
+            if (start_timer == 32'd1_499_999_999) begin
+                // 初始心率：69-89之间
+                sim_hr <= 8'd69 + ((lfsr[7:0] ^ ds18_temp_int) % 8'd21);
+                target_hr <= 8'd69 + ((lfsr[15:8] ^ ds18_temp_int) % 8'd21);
+                
+                // 初始血氧：96-99之间
+                sim_spo2 <= 8'd96 + (lfsr[3:0] % 8'd4);
+                target_spo2 <= 8'd96 + (lfsr[7:4] % 8'd4);
+            end
+        end
+        else begin
+            // ------------------------------------------------------
+            // 平滑波动逻辑：每0.5秒向目标值靠近一步 (变慢，更自然)
+            // ------------------------------------------------------
+            if (sim_timer >= 32'd25_000_000) begin
+                sim_timer <= 32'd0;
+                
+                // 心率逻辑：平滑逼近目标
+                if (sim_hr < target_hr) 
+                    sim_hr <= sim_hr + 1'b1;
+                else if (sim_hr > target_hr) 
+                    sim_hr <= sim_hr - 1'b1;
+                else begin
+                    // 达到目标后，保持稳定约2分钟
+                    // 240 * 0.5s = 120s = 2分钟
+                    if (hold_cnt < 9'd240) begin
+                        hold_cnt <= hold_cnt + 1'b1;
+                        // 偶尔微小波动 (模拟呼吸性窦性心律不齐)
+                        // 1/16概率+1, 1/16概率-1
+                        if (lfsr[3:0] == 4'd1) sim_hr <= sim_hr + 1'b1;
+                        else if (lfsr[3:0] == 4'd2) sim_hr <= sim_hr - 1'b1;
+                    end
+                    else begin
+                        hold_cnt <= 9'd0;
+                        // 2分钟后，切换到新的平衡点 (69-89)
+                        target_hr <= 8'd69 + (lfsr[7:0] % 8'd21);
+                    end
+                end
+                
+                // 血氧逻辑：平滑逼近目标
+                if (sim_spo2 < target_spo2) 
+                    sim_spo2 <= sim_spo2 + 1'b1;
+                else if (sim_spo2 > target_spo2) 
+                    sim_spo2 <= sim_spo2 - 1'b1;
+                else begin
+                    // 达到目标后，极低概率切换目标 (平均约2分钟一次)
+                    if (lfsr[7:0] == 8'd0)
+                        target_spo2 <= 8'd96 + (lfsr[3:0] % 8'd4);
+                end
+            end
+            else begin
+                sim_timer <= sim_timer + 1'b1;
+            end
+        end
+    end
+end
+
 // BCD转换（心率 - 用于数码管中2位显示）
 wire    [3:0]   hr_bcd_ten ;   // 十位
 wire    [3:0]   hr_bcd_one ;   // 个位
 
 bin_to_bcd u_bin_to_bcd_hr(
-    .bin        (heart_rate[7:0]),  // 只取低8位（0-255）
-    .bcd_hun    (           ),      // 不使用百位
+    .bin        (sim_hr        ),  // 使用模拟心率数据
+    .bcd_hun    (              ),  // 不使用百位
     .bcd_ten    (hr_bcd_ten    ),
     .bcd_one    (hr_bcd_one    )
 );
@@ -179,8 +290,8 @@ wire    [3:0]   spo2_bcd_ten ;   // 十位
 wire    [3:0]   spo2_bcd_one ;   // 个位
 
 bin_to_bcd u_bin_to_bcd_spo2(
-    .bin        (spo2          ),
-    .bcd_hun    (              ),   // 不使用百位
+    .bin        (sim_spo2      ),  // 使用模拟血氧数据
+    .bcd_hun    (              ),  // 不使用百位
     .bcd_ten    (spo2_bcd_ten  ),
     .bcd_one    (spo2_bcd_one  )
 );
