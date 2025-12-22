@@ -1,0 +1,482 @@
+<session jtag_chain="USB-Blaster [USB-0]" jtag_device="@1: EP3C(10|5)/EP4CE(10|6) (0x020F10DD)" sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6"/>
+    <signal_vec>
+      <trigger_input_vec>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[0]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[1]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[2]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[3]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_in"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_out"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_en"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[0]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[1]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[2]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[3]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[4]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[5]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|data"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[0]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[1]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[2]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[3]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[4]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[5]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[6]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[7]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[0]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[1]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[2]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[3]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[4]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[5]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[6]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[7]"/>
+      </trigger_input_vec>
+      <data_input_vec>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[0]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[1]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[2]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[3]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_in"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_out"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_en"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[0]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[1]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[2]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[3]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[4]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[5]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|data"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[0]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[1]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[2]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[3]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[4]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[5]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[6]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[7]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[8]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[9]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[10]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[11]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[12]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[13]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[14]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[15]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[16]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[17]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[18]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[19]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[20]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[21]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[22]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|cnt[23]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[0]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[1]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[2]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[3]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[4]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[5]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[6]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_int[7]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[0]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[1]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[2]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[3]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[4]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[5]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[6]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|temp_deci[7]"/>
+      </data_input_vec>
+      <storage_qualifier_input_vec>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[0]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[1]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[2]"/>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[3]"/>
+      </storage_qualifier_input_vec>
+    </signal_vec>
+    <pane name="Default pane">
+      <config path="|top_seg_test|sys_clk"/>
+    </pane>
+    <position_info>
+      <single attribute="acq mode" value="0"/>
+      <single attribute="active instance" value="0"/>
+      <single attribute="active node" value="0"/>
+      <single attribute="advanced mode" value="0"/>
+      <single attribute="buffer mode" value="0"/>
+      <single attribute="data acquisition" value="2048"/>
+      <single attribute="node search" value="0"/>
+      <single attribute="power up trigger mode" value="0"/>
+      <single attribute="ram type" value="0"/>
+      <single attribute="sample depth" value="2048"/>
+      <single attribute="segment size" value="128"/>
+      <single attribute="trigger in enable" value="0"/>
+      <single attribute="trigger out enable" value="0"/>
+      <single attribute="trigger position" value="1024"/>
+      <single attribute="active tab" value="1"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2025/12/22 12:18:08  #0">
+      <clock name="sys_clk" polarity="posedge" tap_mode="probeonly"/>
+      <config ram_type="AUTO" reserved_data_nodes="0" reserved_storage_qualifier_nodes="0" reserved_trigger_nodes="0" sample_depth="8192" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[0]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[1]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[2]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[3]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[4]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[5]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[0]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[10]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[11]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[12]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[13]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[14]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[15]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[16]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[17]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[18]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[19]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[1]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[20]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[21]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[22]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[23]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[2]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[3]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[4]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[5]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[6]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[7]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[8]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[9]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|data" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|dq_en" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|dq_in" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|dq_out" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.DATA_DONE" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.DATA_HIGH" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.DATA_LOW" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.IDLE" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.RESP_HIGH" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.RESP_LOW" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.START_HIGH" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.START_LOW" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.WAIT_RESP" tap_mode="classic"/>
+          <wire name="dht11_data" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.00" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.01" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.10" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.11" tap_mode="classic"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[0]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[1]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[2]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[3]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[4]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[5]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[0]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[10]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[11]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[12]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[13]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[14]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[15]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[16]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[17]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[18]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[19]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[1]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[20]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[21]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[22]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[23]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[2]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[3]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[4]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[5]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[6]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[7]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[8]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[9]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|data" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|dq_en" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|dq_in" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|dq_out" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.DATA_DONE" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.DATA_HIGH" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.DATA_LOW" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.IDLE" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.RESP_HIGH" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.RESP_LOW" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.START_HIGH" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.START_LOW" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.WAIT_RESP" tap_mode="classic"/>
+          <wire name="dht11_data" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.00" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.01" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.10" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.11" tap_mode="classic"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[0]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[1]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[2]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[3]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[4]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|bit_cnt[5]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[0]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[10]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[11]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[12]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[13]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[14]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[15]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[16]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[17]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[18]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[19]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[1]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[20]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[21]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[22]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[23]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[2]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[3]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[4]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[5]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[6]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[7]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[8]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|cnt[9]" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|data" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|dq_en" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|dq_in" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|dq_out" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.DATA_DONE" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.DATA_HIGH" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.DATA_LOW" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.IDLE" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.RESP_HIGH" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.RESP_LOW" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.START_HIGH" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.START_LOW" tap_mode="classic"/>
+          <wire name="dht11_ctrl:u_dht11_ctrl|state.WAIT_RESP" tap_mode="classic"/>
+          <wire name="dht11_data" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.00" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.01" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.10" tap_mode="classic"/>
+          <wire name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.11" tap_mode="classic"/>
+        </storage_qualifier_input_vec>
+      </signal_vec>
+      <presentation>
+        <unified_setup_data_view>
+          <node data_index="43" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_data" storage_index="43" tap_mode="classic" trigger_index="43" type="unknown"/>
+          <node data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[0]" storage_index="6" tap_mode="classic" trigger_index="6" type="unknown"/>
+          <node data_index="22" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[2]" storage_index="22" tap_mode="classic" trigger_index="22" type="unknown"/>
+          <node data_index="17" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[1]" storage_index="17" tap_mode="classic" trigger_index="17" type="unknown"/>
+          <node data_index="23" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[3]" storage_index="23" tap_mode="classic" trigger_index="23" type="unknown"/>
+          <node data_index="24" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[4]" storage_index="24" tap_mode="classic" trigger_index="24" type="unknown"/>
+          <node data_index="25" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[5]" storage_index="25" tap_mode="classic" trigger_index="25" type="unknown"/>
+          <node data_index="26" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[6]" storage_index="26" tap_mode="classic" trigger_index="26" type="unknown"/>
+          <node data_index="27" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[7]" storage_index="27" tap_mode="classic" trigger_index="27" type="unknown"/>
+          <node data_index="28" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[8]" storage_index="28" tap_mode="classic" trigger_index="28" type="unknown"/>
+          <node data_index="29" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[9]" storage_index="29" tap_mode="classic" trigger_index="29" type="unknown"/>
+          <node data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[10]" storage_index="7" tap_mode="classic" trigger_index="7" type="unknown"/>
+          <node data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[11]" storage_index="8" tap_mode="classic" trigger_index="8" type="unknown"/>
+          <node data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[12]" storage_index="9" tap_mode="classic" trigger_index="9" type="unknown"/>
+          <node data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[13]" storage_index="10" tap_mode="classic" trigger_index="10" type="unknown"/>
+          <node data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[14]" storage_index="11" tap_mode="classic" trigger_index="11" type="unknown"/>
+          <node data_index="12" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[15]" storage_index="12" tap_mode="classic" trigger_index="12" type="unknown"/>
+          <node data_index="13" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[16]" storage_index="13" tap_mode="classic" trigger_index="13" type="unknown"/>
+          <node data_index="14" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[17]" storage_index="14" tap_mode="classic" trigger_index="14" type="unknown"/>
+          <node data_index="15" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[18]" storage_index="15" tap_mode="classic" trigger_index="15" type="unknown"/>
+          <node data_index="16" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[19]" storage_index="16" tap_mode="classic" trigger_index="16" type="unknown"/>
+          <node data_index="18" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[20]" storage_index="18" tap_mode="classic" trigger_index="18" type="unknown"/>
+          <node data_index="19" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[21]" storage_index="19" tap_mode="classic" trigger_index="19" type="unknown"/>
+          <node data_index="20" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[22]" storage_index="20" tap_mode="classic" trigger_index="20" type="unknown"/>
+          <node data_index="21" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[23]" storage_index="21" tap_mode="classic" trigger_index="21" type="unknown"/>
+          <node data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[0]" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <node data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[1]" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          <node data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[2]" storage_index="2" tap_mode="classic" trigger_index="2" type="unknown"/>
+          <node data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[3]" storage_index="3" tap_mode="classic" trigger_index="3" type="unknown"/>
+          <node data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[4]" storage_index="4" tap_mode="classic" trigger_index="4" type="unknown"/>
+          <node data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[5]" storage_index="5" tap_mode="classic" trigger_index="5" type="unknown"/>
+          <node data_index="30" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|data" storage_index="30" tap_mode="classic" trigger_index="30" type="unknown"/>
+          <node data_index="31" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|dq_en" storage_index="31" tap_mode="classic" trigger_index="31" type="unknown"/>
+          <node data_index="33" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|dq_out" storage_index="33" tap_mode="classic" trigger_index="33" type="unknown"/>
+          <node data_index="32" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|dq_in" storage_index="32" tap_mode="classic" trigger_index="32" type="unknown"/>
+          <node data_index="37" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.IDLE" storage_index="37" tap_mode="classic" trigger_index="37" type="unknown"/>
+          <node data_index="34" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.DATA_DONE" storage_index="34" tap_mode="classic" trigger_index="34" type="unknown"/>
+          <node data_index="35" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.DATA_HIGH" storage_index="35" tap_mode="classic" trigger_index="35" type="unknown"/>
+          <node data_index="36" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.DATA_LOW" storage_index="36" tap_mode="classic" trigger_index="36" type="unknown"/>
+          <node data_index="38" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.RESP_HIGH" storage_index="38" tap_mode="classic" trigger_index="38" type="unknown"/>
+          <node data_index="39" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.RESP_LOW" storage_index="39" tap_mode="classic" trigger_index="39" type="unknown"/>
+          <node data_index="40" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.START_HIGH" storage_index="40" tap_mode="classic" trigger_index="40" type="unknown"/>
+          <node data_index="41" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.START_LOW" storage_index="41" tap_mode="classic" trigger_index="41" type="unknown"/>
+          <node data_index="42" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.WAIT_RESP" storage_index="42" tap_mode="classic" trigger_index="42" type="unknown"/>
+          <node data_index="44" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.00" storage_index="44" tap_mode="classic" trigger_index="44" type="unknown"/>
+          <node data_index="45" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.01" storage_index="45" tap_mode="classic" trigger_index="45" type="unknown"/>
+          <node data_index="46" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.10" storage_index="46" tap_mode="classic" trigger_index="46" type="unknown"/>
+          <node data_index="47" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.11" storage_index="47" tap_mode="classic" trigger_index="47" type="unknown"/>
+        </unified_setup_data_view>
+        <data_view>
+          <net data_index="43" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_data" storage_index="43" tap_mode="classic" trigger_index="43" type="unknown"/>
+          <net data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[0]" storage_index="6" tap_mode="classic" trigger_index="6" type="unknown"/>
+          <net data_index="22" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[2]" storage_index="22" tap_mode="classic" trigger_index="22" type="unknown"/>
+          <net data_index="17" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[1]" storage_index="17" tap_mode="classic" trigger_index="17" type="unknown"/>
+          <net data_index="23" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[3]" storage_index="23" tap_mode="classic" trigger_index="23" type="unknown"/>
+          <net data_index="24" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[4]" storage_index="24" tap_mode="classic" trigger_index="24" type="unknown"/>
+          <net data_index="25" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[5]" storage_index="25" tap_mode="classic" trigger_index="25" type="unknown"/>
+          <net data_index="26" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[6]" storage_index="26" tap_mode="classic" trigger_index="26" type="unknown"/>
+          <net data_index="27" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[7]" storage_index="27" tap_mode="classic" trigger_index="27" type="unknown"/>
+          <net data_index="28" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[8]" storage_index="28" tap_mode="classic" trigger_index="28" type="unknown"/>
+          <net data_index="29" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[9]" storage_index="29" tap_mode="classic" trigger_index="29" type="unknown"/>
+          <net data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[10]" storage_index="7" tap_mode="classic" trigger_index="7" type="unknown"/>
+          <net data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[11]" storage_index="8" tap_mode="classic" trigger_index="8" type="unknown"/>
+          <net data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[12]" storage_index="9" tap_mode="classic" trigger_index="9" type="unknown"/>
+          <net data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[13]" storage_index="10" tap_mode="classic" trigger_index="10" type="unknown"/>
+          <net data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[14]" storage_index="11" tap_mode="classic" trigger_index="11" type="unknown"/>
+          <net data_index="12" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[15]" storage_index="12" tap_mode="classic" trigger_index="12" type="unknown"/>
+          <net data_index="13" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[16]" storage_index="13" tap_mode="classic" trigger_index="13" type="unknown"/>
+          <net data_index="14" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[17]" storage_index="14" tap_mode="classic" trigger_index="14" type="unknown"/>
+          <net data_index="15" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[18]" storage_index="15" tap_mode="classic" trigger_index="15" type="unknown"/>
+          <net data_index="16" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[19]" storage_index="16" tap_mode="classic" trigger_index="16" type="unknown"/>
+          <net data_index="18" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[20]" storage_index="18" tap_mode="classic" trigger_index="18" type="unknown"/>
+          <net data_index="19" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[21]" storage_index="19" tap_mode="classic" trigger_index="19" type="unknown"/>
+          <net data_index="20" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[22]" storage_index="20" tap_mode="classic" trigger_index="20" type="unknown"/>
+          <net data_index="21" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[23]" storage_index="21" tap_mode="classic" trigger_index="21" type="unknown"/>
+          <net data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[0]" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <net data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[1]" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          <net data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[2]" storage_index="2" tap_mode="classic" trigger_index="2" type="unknown"/>
+          <net data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[3]" storage_index="3" tap_mode="classic" trigger_index="3" type="unknown"/>
+          <net data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[4]" storage_index="4" tap_mode="classic" trigger_index="4" type="unknown"/>
+          <net data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[5]" storage_index="5" tap_mode="classic" trigger_index="5" type="unknown"/>
+          <net data_index="30" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|data" storage_index="30" tap_mode="classic" trigger_index="30" type="unknown"/>
+          <net data_index="31" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|dq_en" storage_index="31" tap_mode="classic" trigger_index="31" type="unknown"/>
+          <net data_index="33" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|dq_out" storage_index="33" tap_mode="classic" trigger_index="33" type="unknown"/>
+          <net data_index="32" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|dq_in" storage_index="32" tap_mode="classic" trigger_index="32" type="unknown"/>
+          <net data_index="37" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.IDLE" storage_index="37" tap_mode="classic" trigger_index="37" type="unknown"/>
+          <net data_index="34" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.DATA_DONE" storage_index="34" tap_mode="classic" trigger_index="34" type="unknown"/>
+          <net data_index="35" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.DATA_HIGH" storage_index="35" tap_mode="classic" trigger_index="35" type="unknown"/>
+          <net data_index="36" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.DATA_LOW" storage_index="36" tap_mode="classic" trigger_index="36" type="unknown"/>
+          <net data_index="38" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.RESP_HIGH" storage_index="38" tap_mode="classic" trigger_index="38" type="unknown"/>
+          <net data_index="39" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.RESP_LOW" storage_index="39" tap_mode="classic" trigger_index="39" type="unknown"/>
+          <net data_index="40" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.START_HIGH" storage_index="40" tap_mode="classic" trigger_index="40" type="unknown"/>
+          <net data_index="41" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.START_LOW" storage_index="41" tap_mode="classic" trigger_index="41" type="unknown"/>
+          <net data_index="42" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.WAIT_RESP" storage_index="42" tap_mode="classic" trigger_index="42" type="unknown"/>
+          <net data_index="44" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.00" storage_index="44" tap_mode="classic" trigger_index="44" type="unknown"/>
+          <net data_index="45" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.01" storage_index="45" tap_mode="classic" trigger_index="45" type="unknown"/>
+          <net data_index="46" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.10" storage_index="46" tap_mode="classic" trigger_index="46" type="unknown"/>
+          <net data_index="47" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.11" storage_index="47" tap_mode="classic" trigger_index="47" type="unknown"/>
+        </data_view>
+        <setup_view>
+          <net data_index="43" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_data" storage_index="43" tap_mode="classic" trigger_index="43" type="unknown"/>
+          <net data_index="6" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[0]" storage_index="6" tap_mode="classic" trigger_index="6" type="unknown"/>
+          <net data_index="22" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[2]" storage_index="22" tap_mode="classic" trigger_index="22" type="unknown"/>
+          <net data_index="17" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[1]" storage_index="17" tap_mode="classic" trigger_index="17" type="unknown"/>
+          <net data_index="23" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[3]" storage_index="23" tap_mode="classic" trigger_index="23" type="unknown"/>
+          <net data_index="24" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[4]" storage_index="24" tap_mode="classic" trigger_index="24" type="unknown"/>
+          <net data_index="25" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[5]" storage_index="25" tap_mode="classic" trigger_index="25" type="unknown"/>
+          <net data_index="26" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[6]" storage_index="26" tap_mode="classic" trigger_index="26" type="unknown"/>
+          <net data_index="27" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[7]" storage_index="27" tap_mode="classic" trigger_index="27" type="unknown"/>
+          <net data_index="28" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[8]" storage_index="28" tap_mode="classic" trigger_index="28" type="unknown"/>
+          <net data_index="29" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[9]" storage_index="29" tap_mode="classic" trigger_index="29" type="unknown"/>
+          <net data_index="7" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[10]" storage_index="7" tap_mode="classic" trigger_index="7" type="unknown"/>
+          <net data_index="8" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[11]" storage_index="8" tap_mode="classic" trigger_index="8" type="unknown"/>
+          <net data_index="9" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[12]" storage_index="9" tap_mode="classic" trigger_index="9" type="unknown"/>
+          <net data_index="10" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[13]" storage_index="10" tap_mode="classic" trigger_index="10" type="unknown"/>
+          <net data_index="11" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[14]" storage_index="11" tap_mode="classic" trigger_index="11" type="unknown"/>
+          <net data_index="12" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[15]" storage_index="12" tap_mode="classic" trigger_index="12" type="unknown"/>
+          <net data_index="13" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[16]" storage_index="13" tap_mode="classic" trigger_index="13" type="unknown"/>
+          <net data_index="14" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[17]" storage_index="14" tap_mode="classic" trigger_index="14" type="unknown"/>
+          <net data_index="15" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[18]" storage_index="15" tap_mode="classic" trigger_index="15" type="unknown"/>
+          <net data_index="16" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[19]" storage_index="16" tap_mode="classic" trigger_index="16" type="unknown"/>
+          <net data_index="18" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[20]" storage_index="18" tap_mode="classic" trigger_index="18" type="unknown"/>
+          <net data_index="19" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[21]" storage_index="19" tap_mode="classic" trigger_index="19" type="unknown"/>
+          <net data_index="20" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[22]" storage_index="20" tap_mode="classic" trigger_index="20" type="unknown"/>
+          <net data_index="21" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|cnt[23]" storage_index="21" tap_mode="classic" trigger_index="21" type="unknown"/>
+          <net data_index="0" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[0]" storage_index="0" tap_mode="classic" trigger_index="0" type="unknown"/>
+          <net data_index="1" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[1]" storage_index="1" tap_mode="classic" trigger_index="1" type="unknown"/>
+          <net data_index="2" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[2]" storage_index="2" tap_mode="classic" trigger_index="2" type="unknown"/>
+          <net data_index="3" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[3]" storage_index="3" tap_mode="classic" trigger_index="3" type="unknown"/>
+          <net data_index="4" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[4]" storage_index="4" tap_mode="classic" trigger_index="4" type="unknown"/>
+          <net data_index="5" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|bit_cnt[5]" storage_index="5" tap_mode="classic" trigger_index="5" type="unknown"/>
+          <net data_index="30" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|data" storage_index="30" tap_mode="classic" trigger_index="30" type="unknown"/>
+          <net data_index="31" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|dq_en" storage_index="31" tap_mode="classic" trigger_index="31" type="unknown"/>
+          <net data_index="33" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|dq_out" storage_index="33" tap_mode="classic" trigger_index="33" type="unknown"/>
+          <net data_index="32" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|dq_in" storage_index="32" tap_mode="classic" trigger_index="32" type="unknown"/>
+          <net data_index="37" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.IDLE" storage_index="37" tap_mode="classic" trigger_index="37" type="unknown"/>
+          <net data_index="34" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.DATA_DONE" storage_index="34" tap_mode="classic" trigger_index="34" type="unknown"/>
+          <net data_index="35" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.DATA_HIGH" storage_index="35" tap_mode="classic" trigger_index="35" type="unknown"/>
+          <net data_index="36" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.DATA_LOW" storage_index="36" tap_mode="classic" trigger_index="36" type="unknown"/>
+          <net data_index="38" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.RESP_HIGH" storage_index="38" tap_mode="classic" trigger_index="38" type="unknown"/>
+          <net data_index="39" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.RESP_LOW" storage_index="39" tap_mode="classic" trigger_index="39" type="unknown"/>
+          <net data_index="40" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.START_HIGH" storage_index="40" tap_mode="classic" trigger_index="40" type="unknown"/>
+          <net data_index="41" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.START_LOW" storage_index="41" tap_mode="classic" trigger_index="41" type="unknown"/>
+          <net data_index="42" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="dht11_ctrl:u_dht11_ctrl|state.WAIT_RESP" storage_index="42" tap_mode="classic" trigger_index="42" type="unknown"/>
+          <net data_index="44" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.00" storage_index="44" tap_mode="classic" trigger_index="44" type="unknown"/>
+          <net data_index="45" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.01" storage_index="45" tap_mode="classic" trigger_index="45" type="unknown"/>
+          <net data_index="46" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.10" storage_index="46" tap_mode="classic" trigger_index="46" type="unknown"/>
+          <net data_index="47" duplicate_name_allowed="false" is_data_input="true" is_node_valid="true" is_storage_input="true" is_trigger_input="true" name="seg_dynamic:u_seg_dynamic|hc595_driver:u_hc595_driver|state.11" storage_index="47" tap_mode="classic" trigger_index="47" type="unknown"/>
+        </setup_view>
+        <trigger_in_editor/>
+        <trigger_out_editor/>
+      </presentation>
+      <trigger attribute_mem_mode="false" gap_record="true" global_temp="1" name="trigger: 2025/12/22 12:18:08  #1" position="pre" power_up_trigger_mode="false" record_data_gap="true" segment_size="64" storage_mode="off" storage_qualifier_disabled="no" storage_qualifier_port_is_pin="true" storage_qualifier_port_name="auto_stp_external_storage_qualifier" storage_qualifier_port_tap_mode="classic" trigger_type="circular">
+        <power_up_trigger position="pre" storage_qualifier_disabled="no"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="condition1" type="basic">
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>111111111111111111111111111111111111111111111111
+            <pwr_up_transitional>111111111111111111111111111111111111111111111111</pwr_up_transitional>
+          </transitional>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+          <storage_qualifier_level type="basic">
+            <power_up>
+            </power_up>
+            <op_node/>
+          </storage_qualifier_level>
+        </storage_qualifier_events>
+        <log>
+          <data global_temp="1" name="log: 2025/12/22 12:18:08  #2"/>
+          <extradata/>
+        </log>
+      </trigger>
+    </signal_set>
+  </instance>
+  <mnemonics/>
+  <static_plugin_mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <multi attribute="frame size" size="2" value="1920,1013"/>
+    <single attribute="jtag widget visible" value="1"/>
+    <multi attribute="jtag widget size" size="2" value="398,139"/>
+    <single attribute="instance widget visible" value="1"/>
+    <single attribute="config widget visible" value="1"/>
+    <single attribute="hierarchy widget visible" value="1"/>
+    <single attribute="data log widget visible" value="1"/>
+    <multi attribute="column width" size="23" value="34,34,230,74,68,70,88,88,98,98,88,88,110,101,101,101,101,101,101,101,101,107,81"/>
+  </global_info>
+</session>

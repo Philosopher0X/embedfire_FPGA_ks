@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session>
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="immediate trigger" />
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="6" />
+    <position_info>
+      <single attribute="sample depth" value="2048" />
+      <single attribute="data acquisition" value="2048" />
+    </position_info>
+    <signal_vec>
+      <trigger_input_vec>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[0]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|state[1]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|state[2]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|state[3]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_in" />
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_out" />
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_en" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[0]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[1]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[2]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[3]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[4]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[5]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|data" />
+      </trigger_input_vec>
+      <data_input_vec>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[0]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|state[1]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|state[2]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|state[3]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_in" />
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_out" />
+        <wire name="|top_seg_test|u_dht11_ctrl|dq_en" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[0]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[1]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[2]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[3]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[4]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|bit_cnt[5]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|data" />
+      </data_input_vec>
+      <storage_qualifier_input_vec>
+        <wire name="|top_seg_test|u_dht11_ctrl|state[0]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|state[1]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|state[2]" />
+        <wire name="|top_seg_test|u_dht11_ctrl|state[3]" />
+      </storage_qualifier_input_vec>
+    </signal_vec>
+    <pane name="Default pane">
+      <config path="|top_seg_test|sys_clk" />
+    </pane>
+  </instance>
+  <mnemonics />
+  <static_plugin_mnemonics />
+</session>
