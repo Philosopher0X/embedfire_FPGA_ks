@@ -57,9 +57,13 @@ set_location_assignment PIN_K9 -to stcp
 set_location_assignment PIN_R1 -to ds
 set_location_assignment PIN_L11 -to oe
 
+# DHT11 Sensor
+set_location_assignment PIN_L14 -to dht11_data
+
 set_global_assignment -name VERILOG_FILE rtl/top_seg_test.v
 set_global_assignment -name VERILOG_FILE rtl/hc595_driver.v
 set_global_assignment -name VERILOG_FILE rtl/seg_dynamic.v
+set_global_assignment -name VERILOG_FILE rtl/dht11_ctrl.v
 
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity top_oled -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity top_oled -section_id Top

@@ -36,6 +36,7 @@ assign dht11_data = dht11_oe ? dht11_out : 1'bz;
 // 时间参数(50MHz时钟)
 localparam CNT_18MS  = 24'd900_000;   // 18ms
 localparam CNT_30US  = 24'd1_500;     // 30us
+localparam CNT_40US  = 24'd2_000;     // 40us (数据位判断阈值)
 localparam CNT_100US = 24'd5_000;     // 100us
 localparam CNT_60US  = 24'd3_000;     // 60us
 localparam CNT_2S    = 24'd100_000_000; // 2s 读取间隔
@@ -152,7 +153,8 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
             DATA_BIT: begin
                 if (dht11_data == 1'b0) begin
                     // 根据高电平持续时间判断数据位
-                    if (cnt > CNT_30US) begin
+                    // 0: 26-28us, 1: 70us, 阈值40us
+                    if (cnt > CNT_40US) begin
                         data_buf <= {data_buf[38:0], 1'b1};
                     end
                     else begin

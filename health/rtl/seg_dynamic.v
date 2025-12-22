@@ -1,6 +1,8 @@
 module seg_dynamic(
     input wire sys_clk,
     input wire sys_rst_n,
+    input wire [7:0] temp_int,
+    input wire [7:0] temp_deci,
     
     output wire shcp,
     output wire stcp,
@@ -40,15 +42,16 @@ module seg_dynamic(
         end
     end
     
-    // Number to display (test pattern: 123456)
+    // Number to display (temperature: XX.X°C format)
+    // Display format: [十位][个位][-][小数][-][-]
     always @(*) begin
         case (cnt_sel)
-            3'd0: num = 4'd1;
-            3'd1: num = 4'd2;
-            3'd2: num = 4'd3;
-            3'd3: num = 4'd4;
-            3'd4: num = 4'd5;
-            3'd5: num = 4'd6;
+            3'd0: num = temp_int / 10;           // 温度十位
+            3'd1: num = temp_int % 10;           // 温度个位
+            3'd2: num = 4'd10;                   // 中划线
+            3'd3: num = temp_deci / 10;          // 温度小数位
+            3'd4: num = 4'd10;                   // 中划线
+            3'd5: num = 4'd10;                   // 中划线
             default: num = 4'd0;
         endcase
     end
@@ -67,6 +70,7 @@ module seg_dynamic(
             4'd7: seg_code = 8'hF8; // 7
             4'd8: seg_code = 8'h80; // 8
             4'd9: seg_code = 8'h90; // 9
+            4'd10: seg_code = 8'hBF; // - (中划线)
             default: seg_code = 8'hFF;
         endcase
     end
