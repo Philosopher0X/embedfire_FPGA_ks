@@ -13,6 +13,8 @@ module OLED_ShowData(
 	input[7:0]	   tempH,	
 	input[7:0]	   tempL,
 	
+    input[7:0]          heart_rate,
+    input[7:0]          spo2,           // 【新增】血氧数据
 	
 	input				ShowData_req,		 //字符显示请求
 	input				write_done,			 //iic一组数据写完成
@@ -34,8 +36,8 @@ module OLED_ShowData(
 //reg[3:0]		humidityHL;
 //reg[3:0]		humidityLH;
 //reg[3:0]		humidityLL;
-
-
+reg[7:0]        heart_rate_reg;
+reg[7:0]        spo2_reg;
 reg[7:0]		tempHREG;
 reg[7:0]		tempLREG;
 reg[7:0]		humidityHREG;
@@ -55,7 +57,7 @@ wire				onefont_finish;
 wire[7:0]		fontdata;
 
 assign onefont_finish  = (font_row == 1'b1 && font_index == 'd10 && write_done == 1'b1) ? 1'b1 : 1'b0;
-assign ShowData_finish = (onefont_finish == 1'b1 && font_sel == 'd2) ? 1'b1 : 1'b0;
+assign ShowData_finish = (onefont_finish == 1'b1 && font_sel == 'd8) ? 1'b1 : 1'b0;
 assign ShowData_Data = showfont_data_reg;
 
 always@(*)
@@ -113,21 +115,29 @@ begin
 		show_x <= 'd0;
 		show_y <= 'd0;
 	end
-	else if(font_sel == 'd0)
-	begin
-		show_x <= 'd54;
-		show_y <= 'd3;
-	end
-	else if(font_sel == 'd1)
-	begin
-		show_x <= 'd62;
-		show_y <= 'd3;
-	end
-	else if(font_sel == 'd2)
-	begin
-		show_x <= 'd79;
-		show_y <= 'd3;
-	end
+    // --- Row 0: 血氧 (font_sel 0,1,2) ---
+    else if(font_sel == 'd0) 
+	begin 
+	    show_x <= 'd54; 
+		show_y <= 'd0; 
+	end // 百位 (可选)
+    else if(font_sel == 'd1) 
+	begin 
+	    show_x <= 'd62; 
+		show_y <= 'd0; 
+	end // 十位
+    else if(font_sel == 'd2) begin show_x <= 'd70; show_y <= 'd0; end // 个位
+    
+    // --- Row 3: 温度 (font_sel 3,4,5) ---
+    else if(font_sel == 'd3) begin show_x <= 'd54; show_y <= 'd3; end
+    else if(font_sel == 'd4) begin show_x <= 'd62; show_y <= 'd3; end
+    else if(font_sel == 'd5) begin show_x <= 'd79; show_y <= 'd3; end // 小数
+    
+    // --- Row 5: 心率 (font_sel 6,7,8) ---
+    else if(font_sel == 'd6) begin show_x <= 'd54; show_y <= 'd5; end
+    else if(font_sel == 'd7) begin show_x <= 'd62; show_y <= 'd5; end
+    else if(font_sel == 'd8) begin show_x <= 'd70; show_y <= 'd5; end
+    
 
 	else
 	begin
@@ -142,12 +152,20 @@ always@(posedge sys_clk or negedge rst_n)
 begin
 	if(rst_n == 1'b0)
 		font <= 'd0;
-	else if(font_sel == 'd0)
-		font <= tempHREG / 10;
-	else if(font_sel == 'd1)
-		font <= tempHREG % 10;
-	else if(font_sel == 'd2)
-		font <= tempLREG;
+    // 血氧
+    else if(font_sel == 'd0) font <= spo2_reg / 100;
+    else if(font_sel == 'd1) font <= (spo2_reg / 10) % 10;
+    else if(font_sel == 'd2) font <= spo2_reg % 10;
+    
+    // 温度
+    else if(font_sel == 'd3) font <= tempHREG / 10;
+    else if(font_sel == 'd4) font <= tempHREG % 10;
+    else if(font_sel == 'd5) font <= tempLREG;
+    
+    // 心率
+    else if(font_sel == 'd6) font <= heart_rate_reg / 100;
+    else if(font_sel == 'd7) font <= (heart_rate_reg / 10) % 10;
+    else if(font_sel == 'd8) font <= heart_rate_reg % 10;
 	else
 		font <= font;		
 end
@@ -155,22 +173,13 @@ end
 
 always@(posedge sys_clk or negedge rst_n)
 begin
-	if(rst_n == 1'b0)
-		tempHREG <= 'd0;
-	else if(dht11_done == 1'b1)
-		tempHREG <= tempH;
-	else
-		tempHREG <= tempHREG;
-end
-
-always@(posedge sys_clk or negedge rst_n)
-begin
-	if(rst_n == 1'b0)
-		tempLREG <= 'd0;
-	else if(dht11_done == 1'b1)
-		tempLREG <= tempL;
-	else
-		tempLREG <= tempLREG;
+    if(!rst_n) begin tempHREG<=0; tempLREG<=0; heart_rate_reg<=0; spo2_reg<=0; end
+    else if(dht11_done) begin
+        tempHREG <= tempH;
+        tempLREG <= tempL;
+        heart_rate_reg <= heart_rate;
+        spo2_reg <= spo2;
+    end
 end
 
 OLED_NumData OLED_NumDataHP(
