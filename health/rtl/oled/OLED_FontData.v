@@ -278,35 +278,35 @@ begin
 	begin
 		data7[0] = 8'h00;
 		data7[1] = 8'h00;
-		data7[2] = 8'hFC;
-		data7[3] = 8'h24;
-		data7[4] = 8'h24;
-		data7[5] = 8'h24;
-		data7[6] = 8'hFC;
-		data7[7] = 8'h25;
-		data7[8] = 8'h26;
-		data7[9] = 8'h24;
-		data7[10] = 8'hFC;
-		data7[11] = 8'h24;
-		data7[12] = 8'h24;
-		data7[13] = 8'h24;
-		data7[14] = 8'h04;
+		data7[2] = 8'h80;
+		data7[3] = 8'h00;
+		data7[4] = 8'h00;
+		data7[5] = 8'hE0;
+		data7[6] = 8'h02;
+		data7[7] = 8'h04;
+		data7[8] = 8'h18;
+		data7[9] = 8'h00;
+		data7[10] = 8'h00;
+		data7[11] = 8'h00;
+		data7[12] = 8'h40;
+		data7[13] = 8'h80;
+		data7[14] = 8'h00;
 		data7[15] = 8'h00;
-		data7[16] = 8'h40;
-		data7[17] = 8'h30;
-		data7[18] = 8'h8F;
-		data7[19] = 8'h80;
-		data7[20] = 8'h84;
-		data7[21] = 8'h4C;
-		data7[22] = 8'h55;
-		data7[23] = 8'h25;
-		data7[24] = 8'h25;
-		data7[25] = 8'h25;
-		data7[26] = 8'h55;
-		data7[27] = 8'h4C;
-		data7[28] = 8'h80;
-		data7[29] = 8'h80;
-		data7[30] = 8'h80;
+		data7[16] = 8'h10;
+		data7[17] = 8'h0C;
+		data7[18] = 8'h03;
+		data7[19] = 8'h00;
+		data7[20] = 8'h00;
+		data7[21] = 8'h3F;
+		data7[22] = 8'h40;
+		data7[23] = 8'h40;
+		data7[24] = 8'h40;
+		data7[25] = 8'h40;
+		data7[26] = 8'h40;
+		data7[27] = 8'h78;
+		data7[28] = 8'h00;
+		data7[29] = 8'h01;
+		data7[30] = 8'h0E;
 		data7[31] = 8'h00;
 	end
 end
@@ -314,37 +314,37 @@ always@(posedge sys_clk or negedge rst_n)
 begin
 	if(rst_n == 1'b0)
 	begin
-		data8[0] = 8'h10;
-		data8[1] = 8'h60;
-		data8[2] = 8'h02;
-		data8[3] = 8'h8C;
-		data8[4] = 8'h00;
-		data8[5] = 8'hFE;
-		data8[6] = 8'h92;
-		data8[7] = 8'h92;
-		data8[8] = 8'h92;
-		data8[9] = 8'h92;
-		data8[10] = 8'h92;
-		data8[11] = 8'h92;
-		data8[12] = 8'hFE;
-		data8[13] = 8'h00;
+		data8[0] = 8'h00;
+		data8[1] = 8'h14;
+		data8[2] = 8'hA4;
+		data8[3] = 8'h44;
+		data8[4] = 8'h24;
+		data8[5] = 8'h34;
+		data8[6] = 8'hAD;
+		data8[7] = 8'h66;
+		data8[8] = 8'h24;
+		data8[9] = 8'h94;
+		data8[10] = 8'h04;
+		data8[11] = 8'h44;
+		data8[12] = 8'hA4;
+		data8[13] = 8'h14;
 		data8[14] = 8'h00;
 		data8[15] = 8'h00;
-		data8[16] = 8'h04;
-		data8[17] = 8'h04;
-		data8[18] = 8'h7E;
-		data8[19] = 8'h01;
-		data8[20] = 8'h44;
-		data8[21] = 8'h48;
-		data8[22] = 8'h50;
-		data8[23] = 8'h7F;
-		data8[24] = 8'h40;
-		data8[25] = 8'h40;
-		data8[26] = 8'h7F;
-		data8[27] = 8'h50;
-		data8[28] = 8'h48;
-		data8[29] = 8'h44;
-		data8[30] = 8'h40;
+		data8[16] = 8'h08;
+		data8[17] = 8'h09;
+		data8[18] = 8'h08;
+		data8[19] = 8'h08;
+		data8[20] = 8'h09;
+		data8[21] = 8'h09;
+		data8[22] = 8'h09;
+		data8[23] = 8'hFD;
+		data8[24] = 8'h09;
+		data8[25] = 8'h09;
+		data8[26] = 8'h0B;
+		data8[27] = 8'h08;
+		data8[28] = 8'h08;
+		data8[29] = 8'h09;
+		data8[30] = 8'h08;
 		data8[31] = 8'h00;
 	end
 
@@ -456,22 +456,22 @@ always@(posedge sys_clk or negedge rst_n)
 begin
 	if(rst_n == 1'b0)
 	begin
-		data12[0] = 8'h08;
-		data12[1] = 8'hF8;
-		data12[2] = 8'h88;
-		data12[3] = 8'h88;
-		data12[4] = 8'h88;
-		data12[5] = 8'h88;
-		data12[6] = 8'h70;
+		data12[0] = 8'h00;
+		data12[1] = 8'h00;
+		data12[2] = 8'h00;
+		data12[3] = 8'h00;
+		data12[4] = 8'h00;
+		data12[5] = 8'h00;
+		data12[6] = 8'h00;
 		data12[7] = 8'h00;
-		data12[8] = 8'h20;
-		data12[9] = 8'h3F;
-		data12[10] = 8'h20;
+		data12[8] = 8'h00;
+		data12[9] = 8'h00;
+		data12[10] = 8'h00;
 		data12[11] = 8'h00;
-		data12[12] = 8'h03;
-		data12[13] = 8'h0C;
-		data12[14] = 8'h30;
-		data12[15] = 8'h20;
+		data12[12] = 8'h00;
+		data12[13] = 8'h00;
+		data12[14] = 8'h00;
+		data12[15] = 8'h00;
 	end
 
 
@@ -480,22 +480,22 @@ always@(posedge sys_clk or negedge rst_n)
 begin
 	if(rst_n == 1'b0)
 	begin
-		data13[0] = 8'h08;
-		data13[1] = 8'hF8;
-		data13[2] = 8'h08;
+		data13[0] = 8'h00;
+		data13[1] = 8'h00;
+		data13[2] = 8'h00;
 		data13[3] = 8'h00;
 		data13[4] = 8'h00;
-		data13[5] = 8'h08;
-		data13[6] = 8'hF8;
-		data13[7] = 8'h08;
-		data13[8] = 8'h20;
-		data13[9] = 8'h3F;
-		data13[10] = 8'h21;
-		data13[11] = 8'h01;
-		data13[12] = 8'h01;
-		data13[13] = 8'h21;
-		data13[14] = 8'h3F;
-		data13[15] = 8'h20;
+		data13[5] = 8'h00;
+		data13[6] = 8'h00;
+		data13[7] = 8'h00;
+		data13[8] = 8'h00;
+		data13[9] = 8'h00;
+		data13[10] = 8'h00;
+		data13[11] = 8'h00;
+		data13[12] = 8'h00;
+		data13[13] = 8'h00;
+		data13[14] = 8'h00;
+		data13[15] = 8'h00;
 	end
 
 end
