@@ -42,21 +42,6 @@ wire ds18b20_done;
 wire[7:0]  tempH;
 wire[7:0]  tempL;
 
-
-// 心率计算相关信号
-reg     [17:0]  ir_buf[31:0];   // IR数据缓冲区，存储32个样本
-reg     [17:0]  red_buf[31:0];  // RED数据缓冲区
-reg     [4:0]   buf_idx     ;   // 缓冲区索引
-reg     [31:0]  sample_cnt  ;   // 样本计数
-reg     [15:0]  heart_rate  ;   // 心率值
-reg     [7:0]   spo2        ;   // 血氧饱和度
-reg             hr_valid    ;   // 心率有效
-reg     [17:0]  ir_prev     ;   // 前一个IR值
-reg     [17:0]  ir_prev2    ;   // 前前一个IR值
-reg     [31:0]  peak_cnt    ;   // 峰值计数
-reg     [31:0]  peak_timer  ;   // 峰值计时器
-reg             peak_det    ;   // 峰值检测标志
-
 // 温度显示寄存器
 reg     [7:0]   temp_display;   // 温度显示值（整数部分）
 
@@ -64,11 +49,16 @@ reg     [7:0]   temp_display;   // 温度显示值（整数部分）
 wire    [7:0]   ds18_temp_int;
 wire    [7:0]   ds18_temp_deci;
 
-    // 内部信号
-    wire        drv_ready;
-    wire        data_valid;
-    wire [17:0] red_data;
-    wire [17:0] ir_data;
+// max30102信号
+wire        drv_ready;
+wire        data_valid;
+wire [17:0] red_data;
+wire [17:0] ir_data;
+// 算子层信号
+wire        beat_pulse;     // 心跳脉冲
+wire [7:0]  heart_rate_bpm; // 计算出的心率 (如 75)
+wire [7:0]  spo2_val;       // 计算出的血氧 (如 98)
+wire        result_valid;
 
     // 1. 实例化驱动
     max30102_driver #(
@@ -83,6 +73,20 @@ wire    [7:0]   ds18_temp_deci;
         .o_ir_data      (ir_data),
         .o_data_valid   (data_valid),
         .o_ready        (drv_ready)
+    );
+    ppg_process_top #(
+        .DATA_WIDTH(18)
+    ) u_dsp_core (
+        .clk            (sys_clk),
+        .rst_n          (sys_rst_n),
+        .i_data_valid   (data_valid),
+        .i_red_data     (red_data),
+        .i_ir_data      (ir_data),
+        
+        .o_beat_pulse   (beat_pulse),
+        .o_heart_rate   (heart_rate_bpm),
+        .o_spo2         (spo2_val),
+        .o_result_valid (result_valid)
     );
 // 实例化DS18B20驱动
 ds18b20_ctrl u_ds18b20_ctrl(
@@ -140,67 +144,6 @@ always @(posedge sys_clk or negedge sys_rst_n) begin
         temp_display <= 8'd25;  // 默认25度
     else
         temp_display <= ds18_temp_int; // 使用DS18B20温度
-end
-
-// 数据缓冲区管理和心率/SpO2计算
-always @(posedge sys_clk or negedge sys_rst_n) begin
-    if (!sys_rst_n) begin
-        buf_idx <= 5'd0;
-        sample_cnt <= 32'd0;
-        ir_prev <= 18'd0;
-        ir_prev2 <= 18'd0;
-        peak_det <= 1'b0;
-        peak_cnt <= 32'd0;
-        peak_timer <= 32'd0;
-        heart_rate <= 16'd0;
-        spo2 <= 8'd98;  // 默认98%
-        hr_valid <= 1'b0;
-    end
-    else if (data_valid) begin
-        // 数据缓冲
-        ir_buf[buf_idx] <= ir_data;
-        red_buf[buf_idx] <= red_data;
-        if (buf_idx == 5'd31)
-            buf_idx <= 5'd0;
-        else
-            buf_idx <= buf_idx + 1'b1;
-        
-        // 峰值检测
-        ir_prev2 <= ir_prev;
-        ir_prev <= ir_data;
-        
-        if (ir_prev > ir_prev2 && ir_data < ir_prev && ir_prev > 18'd10000) begin
-            peak_det <= 1'b1;
-            peak_cnt <= peak_cnt + 1'b1;
-        end
-        else
-            peak_det <= 1'b0;
-        
-        // 样本计数和心率计算
-        if (sample_cnt >= 32'd1000) begin
-            // 心率 = (峰值数 * 60) / 10秒
-            heart_rate <= (peak_cnt * 16'd6);
-            
-            // SpO2计算：简化算法
-            // R = (AC_red / DC_red) / (AC_ir / DC_ir)
-            // SpO2 = 110 - 25*R (简化公式)
-            // 这里使用固定值98%，实际需要复杂计算
-            if (ir_data > 18'd50000 && red_data > 18'd50000)
-                spo2 <= 8'd98;  // 有效信号
-            else
-                spo2 <= 8'd0;   // 无效信号
-            
-            peak_cnt <= 32'd0;
-            sample_cnt <= 32'd1;  // 重置为1（包含当前样本）
-            hr_valid <= 1'b1;
-        end
-        else begin
-            sample_cnt <= sample_cnt + 1'b1;
-            hr_valid <= 1'b0;
-        end
-        
-        peak_timer <= peak_timer + 1'b1;
-    end
 end
 
 // BCD转换（心率 - 用于数码管中2位显示）
