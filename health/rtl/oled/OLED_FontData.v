@@ -474,8 +474,6 @@ begin
 		data12[14]= 8'h0E; 
 		data12[15]= 8'h00;
 	end
-
-
 end
 always@(posedge sys_clk or negedge rst_n)
 begin
@@ -498,6 +496,7 @@ begin
 		data13[14]= 8'h0E; 
 		data13[15]= 8'h00;
 	end
+end
 always@(posedge sys_clk or negedge rst_n)
 begin
     if(rst_n == 1'b0)
@@ -519,7 +518,6 @@ begin
 		data14[14]= 8'h00; 
 		data14[15]= 8'h3F;
     end
-end
 end
 
 endmodule 
