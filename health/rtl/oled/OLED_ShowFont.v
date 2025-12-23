@@ -85,7 +85,7 @@ begin
 		font_size <= 'd0;
 	else if(font_index <= 'd3)
 		font_size <= 'd0;
-	else if(font_index == 'd10 || font_index == 'd12 || font_index == 'd13 || font_index == 'd14)
+    else if(font_index == 'd9 || font_index == 'd12 || font_index == 'd13 || font_index == 'd14)
 		font_size <= 'd0;
 	else
 		font_size <= 'd1;
@@ -166,19 +166,19 @@ begin
 		show_x <= 'd100;
 		show_y <= 'd3;
 	end
-	else if(onefont_finish == 1'b1 && font_index == 'd11)	 //R
+	else if(onefont_finish == 1'b1 && font_index == 'd11)	 // 'b'
 	begin
-		show_x <= 'd100;
+		show_x <= 'd80; // 第一位
 		show_y <= 'd5;
 	end
-	else if(onefont_finish == 1'b1 && font_index == 'd12)	 //H
+	else if(onefont_finish == 1'b1 && font_index == 'd12)	 // 'p'
 	begin
-		show_x <= 'd108;
+		show_x <= 'd88; // 第二位 (+8)
 		show_y <= 'd5;
 	end
-	else if(onefont_finish == 1'b1 && font_index == 'd13)	 //.
+	else if(onefont_finish == 1'b1 && font_index == 'd13)	 // 'm'
 	begin
-		show_x <= 'd70;
+		show_x <= 'd96; // 第三位 (+8)
 		show_y <= 'd5;
 	end
 	else

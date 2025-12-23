@@ -29,8 +29,9 @@ reg[7:0] data8[31:0];   //湿
 reg[7:0] data9[31:0];   //度
 reg[7:0] data10[15:0];   //.
 reg[7:0] data11[31:0];   //℃
-reg[7:0] data12[15:0];   //R
-reg[7:0] data13[15:0];   //H
+reg[7:0] data12[15:0];  // b
+reg[7:0] data13[15:0];  // p
+reg[7:0] data14[15:0];  // m 
 
 always@(posedge sys_clk or negedge rst_n)
 begin
@@ -65,7 +66,7 @@ begin
 	else if(font_sel == 'd13)
 		data <= data13[index + 'd8 * font_row];
 	else if(font_sel == 'd14)
-		data <= data10[index + 'd8 * font_row];
+		data <= data14[index + 'd8 * font_row];
 	else
 		data <= data;
 end
@@ -456,22 +457,22 @@ always@(posedge sys_clk or negedge rst_n)
 begin
 	if(rst_n == 1'b0)
 	begin
-		data12[0] = 8'h00;
-		data12[1] = 8'h00;
-		data12[2] = 8'h00;
-		data12[3] = 8'h00;
-		data12[4] = 8'h00;
-		data12[5] = 8'h00;
-		data12[6] = 8'h00;
-		data12[7] = 8'h00;
-		data12[8] = 8'h00;
-		data12[9] = 8'h00;
-		data12[10] = 8'h00;
-		data12[11] = 8'h00;
-		data12[12] = 8'h00;
-		data12[13] = 8'h00;
-		data12[14] = 8'h00;
-		data12[15] = 8'h00;
+        data12[0] = 8'h10;
+		data12[1] = 8'hF0; 
+		data12[2] = 8'h00; 
+		data12[3] = 8'h80;
+        data12[4] = 8'h80; 
+		data12[5] = 8'h00; 
+		data12[6] = 8'h00; 
+		data12[7] = 8'h00;       
+        data12[8] = 8'h00; 
+		data12[9] = 8'h3F; 
+		data12[10]= 8'h11; 
+		data12[11]= 8'h20;
+        data12[12]= 8'h20; 
+		data12[13]= 8'h11; 
+		data12[14]= 8'h0E; 
+		data12[15]= 8'h00;
 	end
 
 
@@ -480,24 +481,45 @@ always@(posedge sys_clk or negedge rst_n)
 begin
 	if(rst_n == 1'b0)
 	begin
-		data13[0] = 8'h00;
-		data13[1] = 8'h00;
-		data13[2] = 8'h00;
-		data13[3] = 8'h00;
-		data13[4] = 8'h00;
-		data13[5] = 8'h00;
-		data13[6] = 8'h00;
-		data13[7] = 8'h00;
-		data13[8] = 8'h00;
-		data13[9] = 8'h00;
-		data13[10] = 8'h00;
-		data13[11] = 8'h00;
-		data13[12] = 8'h00;
-		data13[13] = 8'h00;
-		data13[14] = 8'h00;
-		data13[15] = 8'h00;
+        data13[0] = 8'h80; 
+		data13[1] = 8'h80; 
+		data13[2] = 8'h00; 
+		data13[3] = 8'h80;
+        data13[4] = 8'h80; 
+		data13[5] = 8'h00; 
+		data13[6] = 8'h00; 
+		data13[7] = 8'h00;       
+        data13[8] = 8'h80; 
+		data13[9] = 8'hFF; 
+		data13[10]= 8'h91; 
+		data13[11]= 8'h20;
+        data13[12]= 8'h20; 
+		data13[13]= 8'h11; 
+		data13[14]= 8'h0E; 
+		data13[15]= 8'h00;
 	end
-
+always@(posedge sys_clk or negedge rst_n)
+begin
+    if(rst_n == 1'b0)
+    begin
+        data14[0] = 8'h80; 
+		data14[1] = 8'h80; 
+		data14[2] = 8'h80; 
+		data14[3] = 8'h80;
+        data14[4] = 8'h80; 
+		data14[5] = 8'h80; 
+		data14[6] = 8'h80; 
+		data14[7] = 8'h00;       
+        data14[8] = 8'h20; 
+		data14[9] = 8'h3F; 
+		data14[10]= 8'h20; 
+		data14[11]= 8'h00;
+        data14[12]= 8'h3F; 
+		data14[13]= 8'h20; 
+		data14[14]= 8'h00; 
+		data14[15]= 8'h3F;
+    end
+end
 end
 
 endmodule 
