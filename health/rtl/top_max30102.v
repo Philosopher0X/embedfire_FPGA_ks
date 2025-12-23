@@ -106,7 +106,8 @@ OLED_Top OLED_Topds(
 	.sensor_done		(ds18b20_done),
 	.temp_int			(ds18_temp_int),			//温度数据整数
 	.temp_deci			(ds18_temp_deci),			//温度数据小数
-	
+	.heart_rate       (heart_rate_bpm),
+   .spo2             (spo2_val),
 	//OLED IIC
 	.OLED_SCL	(OLED_SCL),
 	.OLED_SDA	(OLED_SDA)
@@ -151,7 +152,7 @@ wire    [3:0]   hr_bcd_ten ;   // 十位
 wire    [3:0]   hr_bcd_one ;   // 个位
 
 bin_to_bcd u_bin_to_bcd_hr(
-    .bin        (sim_hr        ),  // 使用模拟心率数据
+    .bin        (heart_rate_bpm ),  // 使用模拟心率数据
     .bcd_hun    (              ),  // 不使用百位
     .bcd_ten    (hr_bcd_ten    ),
     .bcd_one    (hr_bcd_one    )
@@ -162,7 +163,7 @@ wire    [3:0]   spo2_bcd_ten ;   // 十位
 wire    [3:0]   spo2_bcd_one ;   // 个位
 
 bin_to_bcd u_bin_to_bcd_spo2(
-    .bin        (sim_spo2      ),  // 使用模拟血氧数据
+    .bin        (spo2_val      ),  // 使用模拟血氧数据
     .bcd_hun    (              ),  // 不使用百位
     .bcd_ten    (spo2_bcd_ten  ),
     .bcd_one    (spo2_bcd_one  )

@@ -75,7 +75,6 @@ spo2_calc #(
     .i_beat_pulse (o_beat_pulse), // 使用心跳作为同步信号
     .o_spo2       (o_spo2)
 );
-    assign o_spo2 = 8'd0;
     
     assign o_result_valid = red_filter_valid;
 

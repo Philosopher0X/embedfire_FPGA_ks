@@ -16,9 +16,9 @@ module OLED_FontData(
 );
 
 
-reg[7:0] data0[15:0];   //F
-reg[7:0] data1[15:0];   //G
-reg[7:0] data2[15:0];   //P
+reg[7:0] data0[31:0];   //血
+reg[7:0] data1[31:0];   //氧
+reg[7:0] data2[15:0];   //%
 reg[7:0] data3[15:0];   //A
 reg[7:0] data4[31:0];   //之
 reg[7:0] data5[31:0];   //旅
@@ -75,66 +75,38 @@ always@(posedge sys_clk or negedge rst_n)
 begin
 	if(rst_n == 1'b0)
 	begin
-		data0[0] = 8'h08;
-		data0[1] = 8'hF8;
-		data0[2] = 8'h88;
-		data0[3] = 8'h88;
-		data0[4] = 8'hE8;
-		data0[5] = 8'h08;
-		data0[6] = 8'h10;
-		data0[7] = 8'h00;
-		data0[8] = 8'h20;
-		data0[9] = 8'h3F;
-		data0[10] = 8'h20;
-		data0[11] = 8'h00;
-		data0[12] = 8'h03;
-		data0[13] = 8'h00;
-		data0[14] = 8'h00;
-		data0[15] = 8'h00;
+		data0[0] = 8'h00; data0[1] = 8'h00; data0[2] = 8'hF8; data0[3] = 8'h08;
+		data0[4] = 8'h08; data0[5] = 8'hF8; data0[6] = 8'h0C; data0[7] = 8'h0B;
+		data0[8] = 8'h08; data0[9] = 8'hF8; data0[10]= 8'h08; data0[11]= 8'h08;
+		data0[12]= 8'hF8; data0[13]= 8'h00; data0[14]= 8'h00; data0[15]= 8'h00;
+		data0[16]= 8'h40; data0[17]= 8'h40; data0[18]= 8'h7F; data0[19]= 8'h40;
+		data0[20]= 8'h40; data0[21]= 8'h7F; data0[22]= 8'h40; data0[23]= 8'h40;
+		data0[24]= 8'h40; data0[25]= 8'h7F; data0[26]= 8'h40; data0[27]= 8'h40;
+		data0[28]= 8'h7F; data0[29]= 8'h40; data0[30]= 8'h40; data0[31]= 8'h00;
 	end
 end
 always@(posedge sys_clk or negedge rst_n)
 begin
 	if(rst_n == 1'b0)
 	begin
-		data1[0] = 8'h08;
-		data1[1] = 8'hF8;
-		data1[2] = 8'h08;
-		data1[3] = 8'h08;
-		data1[4] = 8'h08;
-		data1[5] = 8'h08;
-		data1[6] = 8'hF0;
-		data1[7] = 8'h00;
-		data1[8] = 8'h20;
-		data1[9] = 8'h3F;
-		data1[10] = 8'h21;
-		data1[11] = 8'h01;
-		data1[12] = 8'h01;
-		data1[13] = 8'h01;
-		data1[14] = 8'h00;
-		data1[15] = 8'h00;
+		data1[0] = 8'h08; data1[1] = 8'h24; data1[2] = 8'h23; data1[3] = 8'h6A;
+		data1[4] = 8'hAA; data1[5] = 8'h2A; data1[6] = 8'hAA; data1[7] = 8'h6A;
+		data1[8] = 8'h2A; data1[9] = 8'h2A; data1[10]= 8'h2A; data1[11]= 8'hEA;
+		data1[12]= 8'h02; data1[13]= 8'h02; data1[14]= 8'h00; data1[15]= 8'h00;
+		data1[16]= 8'h10; data1[17]= 8'h11; data1[18]= 8'h15; data1[19]= 8'h15;
+		data1[20]= 8'h15; data1[21]= 8'hFF; data1[22]= 8'h15; data1[23]= 8'h15;
+		data1[24]= 8'h15; data1[25]= 8'h11; data1[26]= 8'h10; data1[27]= 8'h0F;
+		data1[28]= 8'h30; data1[29]= 8'h40; data1[30]= 8'hF8; data1[31]= 8'h00;
 	end
 end
 always@(posedge sys_clk or negedge rst_n)
 begin
 	if(rst_n == 1'b0)
 	begin
-		data2[0] = 8'hC0;
-		data2[1] = 8'h30;
-		data2[2] = 8'h08;
-		data2[3] = 8'h08;
-		data2[4] = 8'h08;
-		data2[5] = 8'h38;
-		data2[6] = 8'h00;
-		data2[7] = 8'h00;
-		data2[8] = 8'h07;
-		data2[9] = 8'h18;
-		data2[10] = 8'h20;
-		data2[11] = 8'h20;
-		data2[12] = 8'h22;
-		data2[13] = 8'h1E;
-		data2[14] = 8'h02;
-		data2[15] = 8'h00;
+		data2[0] = 8'hF0; data2[1] = 8'h08; data2[2] = 8'hF0; data2[3] = 8'h80;
+		data2[4] = 8'h60; data2[5] = 8'h18; data2[6] = 8'h00; data2[7] = 8'h00;
+        data2[8] = 8'h00; data2[9] = 8'h31; data2[10]= 8'h0C; data2[11]= 8'h03;
+        data2[12]= 8'h1E; data2[13]= 8'h21; data2[14]= 8'h1E; data2[15]= 8'h00;
 	end
 end
 always@(posedge sys_clk or negedge rst_n)

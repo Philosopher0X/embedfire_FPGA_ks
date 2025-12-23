@@ -8,7 +8,8 @@ module OLED_Top(
     input           sensor_done,    // 连接 DS18B20 的 temp_done
     input[7:0]      temp_int,       // 连接 DS18B20 的 temp_int
     input[7:0]      temp_deci,      // 连接 DS18B20 的 temp_deci
-	
+	input[7:0]      heart_rate,   
+    input[7:0]      spo2,  
 	
 	
 	//OLED IIC
@@ -157,6 +158,8 @@ OLED_ShowData OLED_ShowDataHP(
 	.dht11_done		(sensor_done),
         .tempH           (temp_int),    // 整数部分
         .tempL           (temp_deci),   // 小数部分
+    .heart_rate         (heart_rate), // 心率
+    .spo2               (spo2),       // 血氧
 	
 	.ShowData_req	(showdata_req),		 //字符显示请求
 	.write_done		(IICWriteDone),			 //iic一组数据写完成

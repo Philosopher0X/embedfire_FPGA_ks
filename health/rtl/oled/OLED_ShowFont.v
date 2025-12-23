@@ -85,7 +85,7 @@ begin
 		font_size <= 'd0;
 	else if(font_index <= 'd3)
 		font_size <= 'd0;
-    else if(font_index == 'd10 || font_index == 'd12 || font_index == 'd13 || font_index == 'd14)
+    else if(font_index == 'd2 ||font_index == 'd10 || font_index == 'd12 || font_index == 'd13 || font_index == 'd14)
 		font_size <= 'd0;
 	else
 		font_size <= 'd1;
@@ -99,26 +99,31 @@ begin
 	else if(ShowFont_finish == 1'b1)
 		font_index <= 'd0;
 	else if(onefont_finish == 1'b1)
-		font_index <= font_index + 1'b1;
+begin
+    if(font_index == 'd2)
+        font_index <= 'd6;
+    else
+        font_index <= font_index + 1'b1;
+end
 	else
 		font_index <= font_index;
 end
 
 always@(posedge sys_clk or negedge rst_n)
 begin
-	if(rst_n == 1'b0)                                   //F
+	if(rst_n == 1'b0)                                   //血
 	begin
-		show_x <= 'd8;
+		show_x <= 'd10;
 		show_y <= 'd0;
 	end
-	else if(onefont_finish == 1'b1 && font_index == 'd0) //P
+	else if(onefont_finish == 1'b1 && font_index == 'd0) //氧
 	begin
-		show_x <= 'd24;
+		show_x <= 'd30;
 		show_y <= 'd0;
 	end
-	else if(onefont_finish == 1'b1 && font_index == 'd1)  //G
+	else if(onefont_finish == 1'b1 && font_index == 'd1)  //%
 	begin
-		show_x <= 'd40;
+		show_x <= 'd100;
 		show_y <= 'd0;
 	end
 	else if(onefont_finish == 1'b1 && font_index == 'd2)  //A
@@ -136,7 +141,7 @@ begin
 		show_x <= 'd100;
 		show_y <= 'd0;
 	end
-	else if(onefont_finish == 1'b1 && font_index == 'd5)	//温
+	else if(onefont_finish == 1'b1 && font_index == 'd2)	//温
 	begin
 		show_x <= 'd10;
 		show_y <= 'd3;
