@@ -58,14 +58,11 @@ set_location_assignment PIN_R1 -to ds
 set_location_assignment PIN_L11 -to oe
 
 # MAX30102 Heart Rate & SpO2 Sensor (使用板载I2C)
-set_location_assignment PIN_P15 -to max_scl
-set_location_assignment PIN_N14 -to max_sda
+set_location_assignment PIN_F3 -to max_scl
+set_location_assignment PIN_F1 -to max_sda
 set_location_assignment PIN_L13 -to max_int
 
 # I2C引脚需要设置为3.3V LVTTL
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to max_scl
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to max_sda
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to max_int
 
 # LED Status Indicators (根据征途引脚映射表)
 set_location_assignment PIN_L7 -to led[0]
@@ -90,6 +87,9 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE health_minimal.stp
+set_location_assignment PIN_F5 -to OLED_SCL
+set_location_assignment PIN_F2 -to OLED_SDA
+set_global_assignment -name VERILOG_FILE rtl/iic/iic_drive.v
 set_global_assignment -name VERILOG_FILE rtl/iic/iic.v
 set_global_assignment -name VERILOG_FILE rtl/oled/OLED_Top.v
 set_global_assignment -name VERILOG_FILE rtl/oled/OLED_ShowFont.v
@@ -107,7 +107,5 @@ set_global_assignment -name VERILOG_FILE rtl/hc595_driver.v
 set_global_assignment -name VERILOG_FILE rtl/seg_dynamic.v
 set_global_assignment -name VERILOG_FILE rtl/ds18b20_ctrl.v
 set_global_assignment -name SIGNALTAP_FILE health_minimal.stp
-set_location_assignment PIN_F5 -to OLED_SCL
-set_location_assignment PIN_F2 -to OLED_SDA
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/health_minimal_auto_stripped.stp
