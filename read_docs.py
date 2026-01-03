@@ -50,7 +50,8 @@ def read_excel(file_path):
         print(f"Failed to read Excel: {e}")
 
 if __name__ == "__main__":
-    base_path = r"x:\FPGA\Project\embedfire_FPGA_ks"
+    # Use the directory where this script is located as the base path
+    base_path = os.path.dirname(os.path.abspath(__file__))
     pdf_file = os.path.join(base_path, "[野火]征途Pro_开发板规格书.pdf")
     xlsx_file = os.path.join(base_path, "征途引脚绑定映射表.xlsx")
 
