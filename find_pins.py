@@ -1,7 +1,9 @@
 import pandas as pd
 import os
 
-file_path = r"x:\FPGA\Project\embedfire_FPGA_ks\征途引脚绑定映射表.xlsx"
+# Use the directory where this script is located to find the Excel file
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, "征途引脚绑定映射表.xlsx")
 
 try:
     df = pd.read_excel(file_path)
